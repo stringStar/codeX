@@ -6,6 +6,7 @@ https://www.runoob.com/nodejs/nodejs-install-setup.html
 ```
     npm install
     npm install ts-node -g
+    npm install pm2 -g
 ```
 #### 启动
 - 每5个小时跑一次

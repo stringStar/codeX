@@ -3,6 +3,8 @@ import path from 'path';
 import _ from 'lodash';
 import fs from 'fs';
 import {setTimeout} from "node:timers/promises";
+const schedule = require('node-schedule');
+
 import { generateWallets } from '../utils/hdwallet';
 
  async function retry(fn, params = [], retryDelay = 1000, numRetries = 3) {
@@ -56,4 +58,8 @@ const main = async () => {
     }
 }
 
+schedule.scheduleJob('0 */5 * * *', async() => {
+    await setTimeout(10*60*1000);
+    main()
+});
 main()

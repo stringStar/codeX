@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "rivalrytoken": "ts-node ./src/rivalrytoken",
-    "test": "echo \"Error: no test specified\" && exit 1"
+   "rivalrytoken": "pm2 start ts-node --name 'rivalrytoken' -- ./src/rivalrytoken"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +11,8 @@
   "dependencies": {
     "axios": "^1.7.9",
     "ethers": "^5.7.2",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "node-schedule": "^2.1.1"
   },
   "devDependencies": {
     "@types/node": "^22.10.2"
